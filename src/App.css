@@ -1,38 +1,83 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Softer shadow for depth */
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #e1e1e1; /* Light border for definition */
+}
+
+.heading {
+  color: #007bff;
+  margin-bottom: 30px;
+  font-weight: 600; /* Increase font-weight for prominence */
+}
+
+.input, .output {
+  margin-bottom: 20px;
+}
+
+.input input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+.input input:focus {
+  border-color: #007bff; /* Focus color matches the button */
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25); /* Subtle glow on focus */
+}
+
+.input button, .output button {
+  background-color: #007bff;
+  background-image: linear-gradient(to bottom right, #058dcd, #007bff); /* Gradient for depth */
   color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  font-weight: 500; /* Slightly bolder font */
 }
 
-.App-link {
-  color: #61dafb;
+.input button:hover, .output button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Lifted shadow on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output p {
+  margin: 20px 0;
+  word-break: break-all;
+}
+
+#url {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#url:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25); /* Matching focus style for buttons */
+}
+.short{
+  margin-top: 10px;
 }
